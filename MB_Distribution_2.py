@@ -231,8 +231,8 @@ class Simulation():
             self.check_reflection(particles)
             self.check_coll(particles)
             
-        np.savez('MB_data_1000', pos=pos_array, vel=vel_array,n=self.n,
-                 r=self.radius, box_size=self.box_size)
+            '''np.savez('MB_data_1000', pos=pos_array, vel=vel_array,n=self.n,
+                 r=self.radius, box_size=self.box_size)''' # include to save files
         
         return pos_array, vel_array
     
@@ -421,11 +421,21 @@ class Animation():
         
 if __name__ == "__main__":
     
-    '''
-    s = Simulation(1000, 0.02, 0.00002, 0.015, 7)
-    s.simulate()
+
+
+    n = 1000 # particle number
+    time = 0.02
+    time_interval = 0.00002
+    radius = 0.015
+    box_size = 7
+    
+    s = Simulation(n, time, time_interval, radius, box_size)
+    pos_array, vel_array = s.simulate()
+
     
     '''
+    Example of using the .npz saved file below:
+    
     data = np.load('MB_data_1000.npz')
 
     pos_array = data['pos']
@@ -433,10 +443,11 @@ if __name__ == "__main__":
     n = data['n']
     radius = data['r']
     box_size = data['box_size']
-        
+    '''    
     
     animation = Animation(pos_array, vel_array, n, radius, box_size)
-    animation.kinetic_energy_graph()
+    animation.animate_simulation()
+    animation.animate_graph()
     
 
         
