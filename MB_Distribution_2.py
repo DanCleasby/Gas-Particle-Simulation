@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from matplotlib.colors import Normalize
-import matplotlib.cm as cm
 from itertools import combinations
 
 
@@ -79,6 +78,10 @@ class Simulation():
             length of time for the simulation
         time_interval : float
             interval of each time step
+        radius : float
+            radius of particles
+        box_size : 
+            size of the box container for the particles
 
         Returns
         -------
@@ -296,13 +299,13 @@ class Animation():
         
         ''' Normalize to use cmap to change color of particles based on velocity'''
         self.norm = Normalize(vmin=self.vel_mag_array.min(), vmax=self.vel_mag_array.max())
-        self.cmap = cm.get_cmap('jet')
+        self.cmap = plt.get_cmap('jet')
         
         self.circles = []
         
         for i in range(self.n):
             
-            circle = plt.Circle((self.pos_array[i,0,0], self.pos_array[i,1,0])
+            circle = plt.Circle((self.pos_array[0,0,i], self.pos_array[0,1,i])
                                 , self.radius)
             ax.add_patch(circle)
             
