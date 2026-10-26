@@ -29,6 +29,8 @@ To run the simulation you create a Simulation class object and call .simulate() 
 The simulation can be saved to an .npz file, or ran directly to then be animated
 To animate you take the data and parameters from the simulation and input them into the Animation class object then call the respective animation methods for what you want to see (collision animation, velocity distribution animation or kinetic energy plot)
 
+note that simulations of 1000+ particles may take a minute or so due to number of distances computed. (In the future I plan to change collision checking to only neighbouring particles)
+
 Results:
 
 
