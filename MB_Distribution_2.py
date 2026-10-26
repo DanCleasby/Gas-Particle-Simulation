@@ -231,8 +231,8 @@ class Simulation():
             self.check_reflection(particles)
             self.check_coll(particles)
             
-            '''np.savez('MB_data_1000', pos=pos_array, vel=vel_array,n=self.n,
-                 r=self.radius, box_size=self.box_size)''' # include to save files
+        '''np.savez('MB_data_1000', pos=pos_array, vel=vel_array,n=self.n,
+                    r=self.radius, box_size=self.box_size)''' # include to save files
         
         return pos_array, vel_array
     
