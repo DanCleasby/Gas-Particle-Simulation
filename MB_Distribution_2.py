@@ -292,7 +292,7 @@ class Animation():
         ax.axis("scaled")
         ax.set_xlim(0, self.box_size)
         ax.set_ylim(0, self.box_size)
-        ax.set_title('Balls')
+        ax.set_title('Simulation')
         ax.set_xlabel('x axis')
         ax.set_ylabel('y axis', rotation = 0)
         ax.set_facecolor('black')
