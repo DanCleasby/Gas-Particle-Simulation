@@ -2,7 +2,7 @@
 
 2D Simulation of gas particle collisions to visualise how the Maxwell Boltzmann distribution arises.
 
-![Simulation Screenshot](MB_Dist_Figure_1.png)
+![Simulation Screenshot](Figure_1.png)
 
 What does this simulation do:
 1. Simulates and animates collisions of n particles
@@ -35,10 +35,13 @@ note that simulations of 1000+ particles may take a minute or so due to number o
 
 Results for n = 1000, for 1000 time steps:
 For the initial velocity the results show a standard looking normal distribution, where the histogram looks roughly symmetric about the centre of normal distribution.
-![Initial Velocity Distribution](Velocity_Dist_Initial.png)
+![Initial Velocity Distribution](Figure_2.png)
 
 The final velocity distribution differs as it is skewed to the left, with a long tail going down to the right of the plot. This is to be expected of the Maxwell Boltzmann Distribution. 
-![Final Velocity Distribution](Velocity_Dist_Final.png)
+![Final Velocity Distribution](Figure_3.png)
+
+The Kinetic Energy over time does not vary much at all, having oscillating like behaviour about the centre.
+![Kinetic Energy Plot](Figure_4.png)
 
 Although this data suggests this simulation is successful as it resembles the correct distribution, ideally I would simulate more particles for longer. However, the computation time increases exponentially as the distance calculations scale with O(N^2) due to sorting ids for x and y positions. 
 
