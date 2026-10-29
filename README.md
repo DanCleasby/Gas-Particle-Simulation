@@ -35,10 +35,10 @@ note that simulations of 1000+ particles may take a minute or so due to number o
 
 Results for n = 1000, for 1000 time steps:
 For the initial velocity the results show a standard looking normal distribution, where the histogram looks roughly symmetric about the centre of normal distribution.
-![Initial Velocity Distribution](Figure_2.png)
+![Initial Velocity Distribution](Figure_3.png)
 
 The final velocity distribution differs as it is skewed to the left, with a long tail going down to the right of the plot. This is to be expected of the Maxwell Boltzmann Distribution. 
-![Final Velocity Distribution](Figure_3.png)
+![Final Velocity Distribution](Figure_2.png)
 
 The Kinetic Energy over time does not vary much at all, having oscillating like behaviour about the centre.
 ![Kinetic Energy Plot](Figure_4.png)
